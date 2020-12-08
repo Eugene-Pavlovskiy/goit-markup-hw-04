@@ -2,6 +2,7 @@
   --main-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
   --accent-color: #2196f3;
+  --secondary-color: #ffffff
   --accent-background: #2196f3;
 }
 
@@ -167,6 +168,13 @@ header {
   display: flex;
 }
 
+/*.contact-list__item:first-child::before {
+  content: "";
+  display: block;
+  margin-top: 34px;
+  margin-bottom: 34px;
+}*/
+
 .header__mail {
   margin-right: 50px;
 }
@@ -180,6 +188,13 @@ header {
 /* =============== HERO ===============*/
 .hero {
   background: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../img/hero/bg-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   min-width: 1600px;
 }
 
@@ -237,9 +252,23 @@ header {
   display: flex;
 }
 
+.feature__item-list::before {
+  content: '';
+}
+
 .feature__item-list {
   display: block;
   justify-content: center;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+}
+
+.icon__feature {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 25px 100px;
 }
 
 .feature__item-list:not(:last-child) {
@@ -322,6 +351,36 @@ header {
   padding-left: 59px;
   padding-right: 59px;
 }
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
+  fill: var(--secondary-color);
+}
+
+.social-list__icon {
+  width: 20px;
+  height: 20px;
+}
 /* =============== END TEAM =============== */
 /* =============== FOOTER =============== */
 .footer {
@@ -330,6 +389,10 @@ header {
   min-width: 1600px;
 }
 
+.footer .container {
+  display: flex;
+  justify-content: flex-start;
+}
 .footer .brand__logo {
   margin-right: 0px;
 }
@@ -363,6 +426,22 @@ header {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.row-right {
+  width: 206px;
+  
+
+}
+.footer .description {
+  margin-bottom: 20px;
+}
+.footer .social-list__link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .social-list__link:hover, 
+.footer .social-list__link:focus {
+  background-color: var(--accent-color);
+}
 /* =============== END FOOTER =============== */
 
 /* =============== END INDEX =============== */
