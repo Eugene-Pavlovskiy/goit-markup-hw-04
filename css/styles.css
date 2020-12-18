@@ -54,7 +54,7 @@ img {
 .container {
   width: 1200px;
   padding: 0 15px;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
 }
 
 .social-list__icon {
@@ -114,7 +114,7 @@ img {
 /* =============== INDEX =============== */
 /* =============== HEADER ===============*/
 header {
-  width: 1600px;
+  min-width: 1600px;
   min-height: 80px;
   border-bottom: 1px solid #ececec;
 }
@@ -361,10 +361,10 @@ header {
   padding: 94px 200px 0 200px;
 }
 
-.team .container {
+/*.team .container {
   max-width: 1170px;
   margin:  auto 0 auto;
-}
+}*/
 
 .team .title {
   margin-bottom: 50px;
@@ -548,7 +548,6 @@ justify-content: center;
   display: flex;
   flex-direction: column;
   width: 231px;
-  margin-top: 20px;
 }
 
 .footer .contact-list__item:not(:first-child) {
